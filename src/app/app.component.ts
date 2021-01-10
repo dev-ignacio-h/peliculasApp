@@ -1,4 +1,3 @@
-import { MoviesService } from './services/movies.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,14 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-
-  constructor(private moviesServices: MoviesService) {
-    this.moviesServices.getNowPlaying()
-      .subscribe(resp => {
-        console.log(resp);
-
-      })
-  }
-
-}
+export class AppComponent {}

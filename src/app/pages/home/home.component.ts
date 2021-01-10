@@ -1,4 +1,6 @@
+import { Movie } from './../../interfaces/now-playing.interface';
 import { Component, OnInit } from '@angular/core';
+import { MoviesService } from './../../services/movies.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public movies: Movie [] = []
+
+  constructor(private moviesService: MoviesService) { }
 
   ngOnInit(): void {
+
+    this.moviesService.getNowPlaying()
+      .subscribe(resp => {
+        // console.log(resp.results)
+        this.movies = resp.results;
+      })
   }
 
 }
