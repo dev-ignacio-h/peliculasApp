@@ -1,3 +1,4 @@
+import { MoviesService } from './services/movies.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'peliculasApp';
+
+  constructor(private moviesServices: MoviesService) {
+    this.moviesServices.getNowPlaying()
+      .subscribe(resp => {
+        console.log(resp);
+
+      })
+  }
+
 }
