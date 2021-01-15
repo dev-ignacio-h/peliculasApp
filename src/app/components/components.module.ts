@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { SlideshowComponent } from './slideshow/slideshow.component';
-import { PeliculasPosterGridComponent } from './peliculas-poster-grid/peliculas-poster-grid.component';
+import { MoviesPosterGridComponent } from './movies-poster-grid/movies-poster-grid.component';
 import { RatingModule } from 'ng-starrating';
 
 
@@ -12,12 +12,12 @@ import { RatingModule } from 'ng-starrating';
   declarations: [
     NavbarComponent,
     SlideshowComponent,
-    PeliculasPosterGridComponent
+    MoviesPosterGridComponent
   ],
   exports:[
     NavbarComponent,
     SlideshowComponent,
-    PeliculasPosterGridComponent
+    MoviesPosterGridComponent
   ],
   imports: [
     CommonModule,
