@@ -1,3 +1,4 @@
+import { MovieDetail } from './../interfaces/movie-detail.interface';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
@@ -44,12 +45,18 @@ export class MoviesService {
   }
 
   searchMovies(text: string): Observable<Movie[]> {
-    const params = {...this.params, page: '1', query: text}
+    const params = { ...this.params, page: '1', query: text };
     // https://api.themoviedb.org/3/search/movie
-    return this.http.get<NowPlaying>(`${this.baseUrl}/search/movie`,{
-      params
-    }).pipe(
-      map(resp => resp.results)
-    );
+    return this.http
+      .get<NowPlaying>(`${this.baseUrl}/search/movie`, {
+        params,
+      })
+      .pipe(map((resp) => resp.results));
+  }
+
+  getMovieDetail(id: string) {
+    return this.http.get<MovieDetail>(`${this.baseUrl}/movie/${id}`, {
+      params: this.params,
+    });
   }
 }

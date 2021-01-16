@@ -4,6 +4,7 @@
       class="img-fluid poster"
       [src]="movie.poster_path | poster"
       alt=""
+      (click)="showMovie(movie)"
     />
 
     <div>

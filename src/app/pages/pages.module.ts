@@ -1,3 +1,4 @@
+import { PipesModule } from './../pipes/pipes.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -6,6 +7,7 @@ import { MovieComponent } from './movie/movie.component';
 import { SearchComponent } from './search/search.component';
 
 import { ComponentsModule } from '../components/components.module';
+import { RatingModule } from 'ng-starrating';
 
 
 
@@ -17,7 +19,9 @@ import { ComponentsModule } from '../components/components.module';
   ],
   imports: [
     CommonModule,
-    ComponentsModule
+    ComponentsModule,
+    PipesModule,
+    RatingModule
   ]
 })
 export class PagesModule { }
