@@ -2,7 +2,7 @@
   <div class="col-md-3 mb-5" *ngFor="let movie of movies">
     <img
       class="img-fluid poster"
-      src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}"
+      [src]="movie.poster_path | poster"
       alt=""
     />
 
