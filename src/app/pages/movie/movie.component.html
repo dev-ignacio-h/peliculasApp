@@ -4,7 +4,7 @@
     <img
       [src]="movie.poster_path | poster"
       [alt]="movie.title"
-      class="img-thumbnail"
+      class="img-fluid img-thumbnail"
     />
   </div>
 
@@ -18,7 +18,7 @@
           totalstars="10"
           checkedcolor="peru"
           uncheckedcolor="black"
-          size="20px"
+          size="15px"
           readonly="false"
         ></star-rating>
       </div>
@@ -41,5 +41,11 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="row mt-5" *ngIf="cast">
+  <div class="col">
+    <app-cast-slideshow [cast]="cast"></app-cast-slideshow>
   </div>
 </div>

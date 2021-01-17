@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { MoviesPosterGridComponent } from './movies-poster-grid/movies-poster-grid.component';
 import { RatingModule } from 'ng-starrating';
+import { CastSlideshowComponent } from './cast-slideshow/cast-slideshow.component';
 
 
 
@@ -13,12 +14,14 @@ import { RatingModule } from 'ng-starrating';
   declarations: [
     NavbarComponent,
     SlideshowComponent,
-    MoviesPosterGridComponent
+    MoviesPosterGridComponent,
+    CastSlideshowComponent
   ],
   exports:[
     NavbarComponent,
     SlideshowComponent,
-    MoviesPosterGridComponent
+    MoviesPosterGridComponent,
+    CastSlideshowComponent
   ],
   imports: [
     CommonModule,
