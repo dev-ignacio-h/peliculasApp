@@ -14,7 +14,7 @@
     >
       <div class="movie-description">
         <h3>{{ movie.title }}</h3>
-        <p>{{ movie.overview  }}...</p>
+        <p>{{ movie.overview | slice:0:250 }}...</p>
       </div>
     </div>
   </div>
